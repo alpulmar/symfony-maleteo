@@ -8,31 +8,36 @@
 }
 
 header{
-    height: 20vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    background-color: lightslategray;
 }
 
-.logo-header{
-    padding-left: 17vw;
+.nav-link{
+    color: white;
 }
 
-.heart{
-    color: red;
-    font-size: 40px;
+.container{
+    width: 100%;
+    overflow: auto;
+    text-align: center;
+    padding: 20px;
+    margin: auto,
 }
 
 .jumbotron{
-    background-image: url('/public/assets/img/jumbo@2x.jpg');
+    background-image: url('../assets/img/jumbo@2x.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 62vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
+    padding: 0em;
+    margin: 0em;
 }
 
 .stores{
@@ -49,7 +54,8 @@ header{
 
 .store-message{
     width: 100%;
-    padding: 7%;
+    padding: 20px;
+    margin: 0em;
 }
 
 .store-logos{
@@ -58,17 +64,16 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    padding: 20px;
 }
 
 .como-funciona, .opiniones-guardianes{
     text-align: center;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
 }
 
 .pasos-titulo{
-    padding: 5%;
+    padding: 20px;
     margin: 20px;
     font-size: 35px;
 }
@@ -168,7 +173,7 @@ header{
 }
 
 .opiniones-titulo{
-    padding: 5%;
+    padding: 20px;
     margin: 20px;
     font-size: 35px;
     text-align: center;
@@ -181,13 +186,13 @@ header{
 }
 
 .opinion-autor{
-    padding: 15px;
+    padding: 20px;
     text-align: center;
     width: 100%;
 }
 
 .opinion-lugar{
-    padding: 5px 5px 5px 15px;
+    padding: 5px 5px 5px 5px;
     font-size: 20px;
     text-align: center;
     width: 100%;
@@ -195,6 +200,7 @@ header{
 
 footer{
     height: 20vh;
+    padding: 20px;
     background-color: lightslategrey;
     font-size: 25px;
     display: flex;
@@ -212,7 +218,7 @@ footer{
 
 @media (max-width:1080px){
     .jumbotron{
-        background-image: url('/assets/maleteo-imagenes/img/jumbo@2x.jpg');
+        background-image: url('../assets/img/jumbo@2x.jpg');
     }
 
     .store-logos{
@@ -231,7 +237,67 @@ footer{
 
 @media (max-width:768px){
     .jumbotron{
-        background-image: url('/assets/maleteo-imagenes/img/jumbo@2x.jpg');
+        background-image: url('../assets/img/jumbo@2x.jpg');
+    }
+
+    footer {
+        font-size: 20px;
+    }
+
+    .store-logos {
+        flex-direction: column;
+    }
+
+    .stores {
+      font-size:40px;
+      width: 100%;
+    }
+    
+    .store-message{
+        padding:30px;
+    }
+    .paso-titulo {
+       padding: 10px;
+       font-size: 20px;
+    }
+
+    .pasos, .opiniones {
+       flex-direction: column;
+    }
+
+    .paso, .opinion {
+       width: 100%;
+       padding: 2%;
+    }     
+
+    .contacto {
+       margin:5px auto;
+       display: flex;
+       width:100%;
+   
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+    }
+
+    .contacto-foto {
+       width: 80%;
+       height: auto; 
+    }
+
+    .contacto-formulario {
+       width: 80%;
+       border: 1px solid lightgray;
+       padding: 5%;
+   
+       display: flex;
+       flex-direction: column;
+    }
+}
+
+@media (max-width:400px){
+    .jumbotron{
+        background-image: url('../assets/img/jumbo@2x.jpg');
     }
 
     footer {

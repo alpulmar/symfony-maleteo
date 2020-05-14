@@ -2,37 +2,38 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Maleteo!{% endblock %}</title>
+        <title>{% block title %}Maleteo{% endblock %}</title>
         {% block stylesheets %}
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-            <link rel="stylesheet" href="{{asset('css/styles.css')}}">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+            <link rel="stylesheet" href="/css/style.css">
         {% endblock %}
     </head>
     <body>
         <main>
             {% block header %}
                 <header>
-                    <nav class="navbar navbar-expand-lg navbar-dark">
-                        <a class="navbar-brand" href="{{path("landing")}}">
-                            <img src="assets/img/logo.svg" class="logo-header" alt="logo-maleteo">
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#footer">Contact</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{path('opiniones')}}">Comenta</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{path('app_login')}}">Acceder</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
+                    <picture class="container">
+                        <img src="/assets/img/logo.svg">
+                    </picture>
+                    <div class="container">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/maleteo">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/maleteo/login">Acceder</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/maleteo/register">Registrase</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Comentar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Salir</a>
+                            </li>
+                        </ul>
+                    </div>
                 </header>
             {% endblock %}            
             {% block body %}
@@ -49,17 +50,142 @@
                         </div>
                     </article>
                 </section>
+                <section class="como-funciona">
+            <div class="pasos-titulo">
+                <p>¿Cómo funciona?</p>
+            </div>
+            <article class="pasos">
+                <div class="paso">
+                    <div class="paso-circulo">1</div>
+                    <div class="paso-titulo">Date de alta</div>
+                    <div class="paso-texto">
+                        Lorem ipsum dolor sit amet, 
+                        consectetur adipisicing elit. Dicta ratione, modi 
+                        quasi minus quia perferendis aliquam laudantium 
+                        voluptatem tempore sunt? Nihil, quod consectetur. 
+                        Quo neque magnam, adipisci in eius ipsa.
+                    </div>
+                </div>
+                <div class="paso">
+                    <div class="paso-circulo">2</div>
+                    <div class="paso-titulo">Date de alta</div>
+                    <div class="paso-texto">
+                        Lorem ipsum dolor sit amet, 
+                        consectetur adipisicing elit. Dicta ratione, modi 
+                        quasi minus quia perferendis aliquam laudantium 
+                        voluptatem tempore sunt? Nihil, quod consectetur. 
+                        Quo neque magnam, adipisci in eius ipsa.
+                    </div>
+                </div>
+                <div class="paso">
+                    <div class="paso-circulo">3</div>
+                    <div class="paso-titulo">Date de alta</div>
+                    <div class="paso-texto">
+                        Lorem ipsum dolor sit amet, 
+                        consectetur adipisicing elit. Dicta ratione, modi 
+                        quasi minus quia perferendis aliquam laudantium 
+                        voluptatem tempore sunt? Nihil, quod consectetur. 
+                        Quo neque magnam, adipisci in eius ipsa.
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="contacto">
+            <picture class="contacto-foto">
+                <img src="/assets/img/iPhoneX@2x.png" class="imagen-lateral">
+            </picture>
+            <form class="contacto-formulario">
+                <div class="campo-formulario">
+                    <p class="titulo-medio">Solicita una demo</p>
+                </div>
+                <div class="campo-formulario">
+                    <p>Nombre</p>
+                    <input type="text" name="nombre" placeholder="Pepito">
+                </div>
+                <div class="campo-formulario">
+                    <p>Email</p>
+                    <input type="text" name="nombre" placeholder="example@gmail.com">
+                </div>
+                <div class="campo-formulario">
+                    <p>Ciudad</p>
+                    <select name="ciudad">
+                        <option value="madrid">Madrid</option>
+                        <option value="barcelona">Barcelona</option>
+                        <option value="sevilla">Sevilla</option>
+                    </select>
+                </div>
+                <div class="campo-formulario">
+                    <p><input type="checkbox" name="politica">Acepta la <a href="#">política de privacidad</a></p>
+                </div>
+                <div class="campo-formulario">
+                    <button>Enviar</button>
+                </div>
+            </form>
+        </section>
+        <section class="opiniones-guardianes">
+            <div class="opiniones-titulo">
+                <p>Opiniones de otros guardianes</p>
+            </div>
+            <article class="opiniones">
+                <div class="opinion">
+                    <div class="opinion-texto">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Voluptate aliquid voluptatibus accusantium quae similique 
+                        illum quod modi eligendi fuga unde ut dicta quo facere iste, 
+                        alias maiores distinctio vero minima!
+                    </div>
+                    <div class="opinion-autor">
+                        <p>Sergio Garnacho</p>
+                    </div>
+                    <div class="opinion-lugar">
+                        <p>Tetuán, Madrid</p>
+                    </div>
+                </div>
+                <div class="opinion">
+                    <div class="opinion-texto">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Voluptate aliquid voluptatibus accusantium quae similique 
+                        illum quod modi eligendi fuga unde ut dicta quo facere iste, 
+                        alias maiores distinctio vero minima!
+                    </div>
+                    <div class="opinion-autor">
+                        <p>Sergio Garnacho</p>
+                    </div>
+                    <div class="opinion-lugar">
+                        <p>Tetuán, Madrid</p>
+                    </div>
+                </div>
+                <div class="opinion">
+                    <div class="opinion-texto">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Voluptate aliquid voluptatibus accusantium quae similique 
+                        illum quod modi eligendi fuga unde ut dicta quo facere iste, 
+                        alias maiores distinctio vero minima!
+                    </div>
+                    <div class="opinion-autor">
+                        <p>Sergio Garnacho</p>
+                    </div>
+                    <div class="opinion-lugar">
+                        <p>Tetuán, Madrid</p>
+                    </div>
+                </div>
+            </article>
+        </section> 
             {% endblock %}
             {% block footer %}
                 <footer class="footer">
-                <div class="container text-center">
-                    <picture><img src="assets/img/logo.svg" alt="logo-maleteo"></picture>
-                    <p>Hecho con <span class="heart text-muted">&hearts;</span> en Madrid</p>
-                </div>
+                    <picture>
+                        <img src="/assets/img/logo.svg" alt="logo-maleteo">
+                    </picture>
+                    <p>Hecho con <span class="heart">&hearts;</span> en Madrid</p>
                 </footer>
             {% endblock %}
         </main>
-            {% block javascripts %}{% endblock %}
+            {% block javascript %}
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+            {% endblock %}
     </body>
 </html>
 

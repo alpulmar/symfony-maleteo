@@ -27,4 +27,11 @@ class DefaultController extends AbstractController{
   public function registrarse(){
     return $this -> render('register.html.twig');
   }
+
+  /**
+   * @Route("/maleteo/comentar")
+   */
+  public function comentar(){
+    return $this -> render('opinion.html.twig');
+  }
 }

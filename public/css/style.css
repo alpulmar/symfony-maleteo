@@ -201,7 +201,7 @@ header{
 footer{
     height: 20vh;
     padding: 20px;
-    background-color: lightslategrey;
+    background-color: lightslategray;
     font-size: 25px;
     display: flex;
     align-items: center;

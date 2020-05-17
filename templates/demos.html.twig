@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+
+    <table style="margin-bottom: 0;" class="table table-striped table-dark">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">NOMBRE</th>
+          <th scope="col">EMAIL</th>
+          <th scope="col">CIUDAD</th>
+        </tr>
+      </thead>
+     {% for usuariosDemo in usuarioDemo %}
+       <tbody>
+         <tr>
+          <th class="id" scope="row">{{usuarioDemo.id}}</th>
+          <td class="nombre">{{usuarioDemo.nombre}}</td>
+          <td class="email">{{usuarioDemo.email}}</td>
+          <td class="ciudad">{{usuarioDemo.ciudad}}</td>
+         </tr>
+      </tbody>
+     {% endfor %} 
+</table>
+
+{% endblock %}

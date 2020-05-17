@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+
+    <table style="margin-bottom: 0;" class="table table-striped table-dark">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">AUTOR</th>
+          <th scope="col">CIUDAD</th>
+          <th scope="col">COMENTARIO</th>
+        </tr>
+      </thead>
+     {% for opiniones in opinion %}
+       <tbody>
+         <tr>
+          <th class="id" scope="row">{{opinion.id}}</th>
+          <td class="nombre">{{opinion.autor}}</td>
+          <td class="email">{{opinion.ciudad}}</td>
+          <td class="ciudad">{{opinion.comentario}}</td>
+         </tr>
+      </tbody>
+     {% endfor %} 
+</table>
+
+{% endblock %}

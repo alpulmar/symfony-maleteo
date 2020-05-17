@@ -32,6 +32,11 @@ class UsuarioDemo
      */
     private $ciudad;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $privacidad;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class UsuarioDemo
     public function setCiudad(string $ciudad): self
     {
         $this->ciudad = $ciudad;
+
+        return $this;
+    }
+
+    public function getPrivacidad(): ?string
+    {
+        return $this->privacidad;
+    }
+
+    public function setPrivacidad(string $privacidad): self
+    {
+        $this->privacidad = $privacidad;
 
         return $this;
     }

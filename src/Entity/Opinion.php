@@ -32,6 +32,11 @@ class Opinion
      */
     private $comentario;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $privacidad;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Opinion
     public function setComentario(?string $comentario): self
     {
         $this->comentario = $comentario;
+
+        return $this;
+    }
+
+    public function getPrivacidad(): ?string
+    {
+        return $this->privacidad;
+    }
+
+    public function setPrivacidad(string $privacidad): self
+    {
+        $this->privacidad = $privacidad;
 
         return $this;
     }
